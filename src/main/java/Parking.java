@@ -28,4 +28,12 @@ public class Parking {
     public void setSlot(Double slot) {
         this.slot = slot;
     }
+
+    public LocalDate getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(LocalDate startTime) {
+        this.startTime = startTime;
+    }
 }
