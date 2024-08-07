@@ -1,16 +1,27 @@
+package com.mbm.modelo;
+
+import javax.persistence.*;
 import java.time.LocalDate;
 
+@Entity
 public class Parking {
 
-    //private String id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
     private Double slot;
     private LocalDate startTime;
+    @Column(nullable = false, length = 7, unique = true)
     private String licencePlate;
 
     public Parking(Double slot, String licencePlate) {
         this.slot = slot;
         this.startTime = LocalDate.now();
         this.licencePlate = licencePlate;
+    }
+
+    public Parking() {
+
     }
 
     public String getLicencePlate() {

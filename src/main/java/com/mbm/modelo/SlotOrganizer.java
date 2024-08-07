@@ -1,3 +1,5 @@
+package com.mbm.modelo;
+
 import java.util.Stack;
 
 public class SlotOrganizer {
